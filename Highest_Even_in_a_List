@@ -1,0 +1,19 @@
+def even(number):
+  if number % 2 == 0:
+    return number
+
+def reverse_sort(list):
+  list.sort()
+  list.reverse()
+  return list
+
+def highest_even(list):
+  reverse_sort(list)
+  print(list)
+  for i in list:
+    if even(i):
+      print(i)
+      return i
+
+highest_even([2,1,17,23,22,5,10,3,8,12,20,55,16,9])
+
