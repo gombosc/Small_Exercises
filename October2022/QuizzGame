@@ -1,0 +1,49 @@
+Answers = ["1993", "Berlin", "Bern", "Oslo",]
+
+def quiz(name):
+    print("Let's test your knowldege " + name + ": \n")
+    score = 0
+    user = input("Question 1. When was the EU founded?\n")
+    if user == Answers[0]:
+        print("Correct")
+        score += 1
+    else:
+        print("Incorrect")
+
+    user = input("Question 2. What's the capital of Germany?\n")
+    if user == Answers[1]:
+        print("That's correct!")
+        score += 1
+    else:
+        print("Incorrect")
+
+    user = input("Question 3. What's the capital of Switzerland?\n")
+    if user == Answers[2]:
+        print("That's correct!")
+        score += 1
+    else:
+        print("Incorrect")
+
+    user = input("Question 4. What's the capital of Norway?\n")
+    if user == Answers[3]:
+        print("That's correct!")
+        score += 1
+    else:
+        print("Incorrect")
+
+    nr_question = str(len(Answers))
+    if str(score) == nr_question:
+        print("You got all " + nr_question + " questions correct! Bravo!")
+    elif score == 0:
+        print("You've got no answer correct...")
+    else:
+        print("You've got " + str(score) + " questions correct!")
+
+
+choice = input("Do you want to play a game? \n")
+if choice.lower() != "yes":
+    print("Ok, bye!") and quit()
+else:
+    name1 = input("What's your name: \n")
+    quiz(name1)
+
